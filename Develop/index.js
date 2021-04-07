@@ -33,12 +33,27 @@ const questions = () => {
     {
       type: 'input',
       name: 'project test instructions',
-      message: 'If you have them, please provide test examples for your project and how others can run them. '
+      message: 'If you have them, please provide test examples for your project and how others can run them.'
     },
     {
       type: 'list ',
-      name: 'project test instructions',
-      message: 'If you have them, please provide test examples for your project and how others can run them. '
+      name: 'project licensing options',
+      message: 'Please select a license for your project:',
+      choices: [
+        'MIT License',
+        'Apache License 2.0',
+        'Mozilla Public License 2.0'
+      ]
+    },
+    {
+      type: 'input',
+      name: 'github username',
+      message: 'Github username?'
+    },
+    {
+      type: 'input',
+      name: 'email address',
+      message: 'Email Address?'
     }
   ]);
 }; 
@@ -53,12 +68,14 @@ function init() {}
 init();
 
 
-
-// WHEN I choose a license for my application from a list of options
 // THEN a badge for that license is added near the top of the README and a notice is added to the section of the README entitled License that explains which license the application is covered under
-// WHEN I enter my GitHub username
+
+
+
 // THEN this is added to the section of the README entitled Questions, with a link to my GitHub profile
-// WHEN I enter my email address
+
+
 // THEN this is added to the section of the README entitled Questions, with instructions on how to reach me with additional questions
+
 // WHEN I click on the links in the Table of Contents
 // THEN I am taken to the corresponding section of the README
