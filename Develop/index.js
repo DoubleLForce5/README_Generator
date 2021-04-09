@@ -38,12 +38,12 @@ const questions = () => {
     },
     {
       type: 'list',
-      name: 'licensing',
+      name: 'license',
       message: 'Please select a license for your project:',
       choices: [
-        'MIT License',
-        'Apache License 2.0',
-        'Mozilla Public License 2.0'
+        'MIT',
+        'Apache-2.0',
+        'MPL-2.0'
       ]
     },
     {
