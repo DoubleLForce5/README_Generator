@@ -8,8 +8,18 @@ const questions = () => {
   return inquirer.prompt([
     {
       type: 'input',
+      name: 'name',
+      message: 'Your name?'
+    },
+    {
+      type: 'input',
       name: 'title',
       message: 'What is the name of your project?'
+    },
+    {
+      type: 'input',
+      name: 'year',
+      message: 'Current year?'
     },
     {
       type: 'input',
@@ -18,18 +28,18 @@ const questions = () => {
     },
     {
       type: 'input',
-      name: 'instructions',
+      name: 'installation',
       message: 'Any installation instructions?'
     },
     {
       type: 'input',
-      name: 'information',
+      name: 'usage',
       message: 'Usage information?'
     },
     {
       type: 'input',
-      name: 'contributors',
-      message: 'List any known project contributors and how others can contribute going forward.'
+      name: 'contributing',
+      message: 'Please list any contributor guidelines.'
     },
     {
       type: 'input',
@@ -42,8 +52,7 @@ const questions = () => {
       message: 'Please select a license for your project:',
       choices: [
         'MIT',
-        'Apache',
-        'Mozilla',
+        'ISC',
         'None'
       ]
     },
@@ -78,16 +87,3 @@ function init() {
 
 // Function call to initialize app
 init();
-
-
-// THEN a badge for that license is added near the top of the README and a notice is added to the section of the README entitled License that explains which license the application is covered under
-
-
-
-// THEN this is added to the section of the README entitled Questions, with a link to my GitHub profile
-
-
-// THEN this is added to the section of the README entitled Questions, with instructions on how to reach me with additional questions
-
-// WHEN I click on the links in the Table of Contents
-// THEN I am taken to the corresponding section of the README

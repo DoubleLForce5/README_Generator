@@ -3,8 +3,7 @@
 function renderLicenseBadge(license) {
   switch (license.license){
     case 'MIT': return "![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)"
-    case 'Apache': return "![License: Apache](https://img.shields.io/badge/License-Apache%202.0-blue.svg)"
-    case 'Mozilla': return "![License: Mozilla](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)"
+    case 'ISC': return "![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)"
     case 'None': return ""
   };
 };
@@ -14,8 +13,7 @@ function renderLicenseBadge(license) {
 function renderLicenseLink(license) {
   switch (license.license){
     case 'MIT': return "[License](https://opensource.org/licenses/MIT)"
-    case 'Apache': return "[License](https://opensource.org/licenses/Apache-2.0)"
-    case 'Mozilla': return "![License](https://opensource.org/licenses/MPL-2.0)"
+    case 'ISC': return "[License](https://opensource.org/licenses/ISC)"
     case 'None': return ""
   };
 };
@@ -24,8 +22,40 @@ function renderLicenseLink(license) {
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
   switch (license.license){
-    case 'MIT': return ""
+    case 'MIT': return `
+    Copyright (c) ${license.name} ${license.year}
+    
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+    
+    The above copyright notice and this permission notice shall be included in all
+    copies or substantial portions of the Software.
+    
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+    SOFTWARE.`
+    case 'ISC': return `Copyright (c) ${license.year}, ${license.name} 
 
+    Permission to use, copy, modify, and/or distribute this software for any
+    purpose with or without fee is hereby granted, provided that the above
+    copyright notice and this permission notice appear in all copies.
+    
+    THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+    WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+    MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+    ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+    WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+    ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
+    OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.`
+    case 'None': return ""
   }
 }
 
@@ -35,22 +65,27 @@ function generateMarkdown(data) {
   ${renderLicenseBadge(data)}
   ## Description: 
   ${data.description}
-  ## Instruction: 
-  ${data.instructions}
-  ## Information: 
-  ${data.information}
-  ## Contribution(s):
-  ${data.contributors}
+  ## Table of Contents: 
+  * [Installation Instruction](#Installation-Instructions)
+  * [Usage Information](#Usage-Information)
+  * [Contribution Guidelines](#Contribution-Guidelines)
+  * [Test](#Test)
+  * [License](#License)
+  * [Questions](#Questions)
+  ## Installation Instructions: 
+  ${data.installation}
+  ## Usage Information: 
+  ${data.usage}
+  ## Contribution Guidelines:
+  ${data.contributing}
   ## Test:
   ${data.test}
   ## License:
   ${data.license}
   ${renderLicenseLink(data)}
-  ## GitHub: 
-  ${data.github}
-  ## Email: 
-  ${data.email}
-  `
+  ${renderLicenseSection(data)}
+  ## Questions: 
+  Contact me at: GitHub: ${data.github} and/or Email: ${data.email}`
 };
 
 module.exports = generateMarkdown;
