@@ -85,7 +85,7 @@ function generateMarkdown(data) {
   ${renderLicenseLink(data)}
   ${renderLicenseSection(data)}
   ## Questions: 
-  Contact me at: GitHub: ${data.github} and/or Email: ${data.email}`
+  Contact me @ GitHub: https://github.com/${data.github} and/or Email: ${data.email}`
 };
 
 module.exports = generateMarkdown;
