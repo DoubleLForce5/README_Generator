@@ -42,8 +42,9 @@ const questions = () => {
       message: 'Please select a license for your project:',
       choices: [
         'MIT',
-        'Apache-2.0',
-        'MPL-2.0'
+        'Apache',
+        'Mozilla',
+        'None'
       ]
     },
     {
