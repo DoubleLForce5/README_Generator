@@ -1,4 +1,4 @@
-# Project
+# test project
   ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
   ## Description: 
   test
@@ -21,7 +21,7 @@
   MIT
   [License](https://opensource.org/licenses/MIT)
   
-    Copyright (c) Olivia 2021
+    Copyright (c) olivia 2021
     
     Permission is hereby granted, free of charge, to any person obtaining a copy
     of this software and associated documentation files (the "Software"), to deal
