@@ -40,4 +40,4 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 ## Questions:
-Contact me @ https://github.com/DoubleLForce5 and/or lopez.olivia17@gmail.com 
+Contact me @ https://github.com/DoubleLForce5 and/or lopez.olivia17@outlook.com
