@@ -3,7 +3,7 @@
 ## Description
 This README.md generator was created so that developers, including myself, can quickly create a professional README for new projects. 
 
-## Installation / Usage Instructions: 
+## Installation / Usage instructions: 
 - To utilize this application you will need Node.js.
 - Clone this repository and open it within VS Code or any text editor of your choosing.
 - Once you are within the 'Develop' folder open a new terminal within your text editor and type 'NPM install' and hit enter. 
@@ -11,11 +11,11 @@ This README.md generator was created so that developers, including myself, can q
 - Once you have completed the series of prompts a README.MD will be generated for your project. 
 - You can then place this README.md in the desired location. 
 
-## Tech Used: 
+## Tech 
 - Node.js 
 - Javascript
 
-## Video Demonstration
+## Video demonstration
 [video demonstration](https://drive.google.com/file/d/1GFfn9AVzYUemlmSibVv49gzrOFvyeAVL/view?usp=sharing)
 
 ## MIT license
@@ -39,5 +39,5 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-## Questions:
+## Questions
 Contact me @ https://github.com/DoubleLForce5 and/or lopez.olivia17@outlook.com
