@@ -14,6 +14,7 @@ This README.md generator was created so that developers, including myself, can q
 ## Tech 
 - Node.js 
 - Javascript
+- inquirer package
 
 ## Video demonstration
 [video demonstration](https://drive.google.com/file/d/1GFfn9AVzYUemlmSibVv49gzrOFvyeAVL/view?usp=sharing)
